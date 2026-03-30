@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "438454028710",
+    "project_id": "wanted-bot-app",
+    "storage_bucket": "wanted-bot-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438454028710:android:cb6efcc1814044b2cc2767",
+        "android_client_info": {
+          "package_name": "com.example.wanted_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxUrHwX3SgpuY7IxV6MQ6xqrx5Ft3ojTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
