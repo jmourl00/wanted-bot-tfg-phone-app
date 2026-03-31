@@ -34,11 +34,14 @@ data class BotonBarra(val icono: ImageVector, val ruta: String)
 fun AppPrincipal() {
     WantedAppTheme {
         val navController = rememberNavController()
+        val viewModel: ProductosViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 
         val botonesBarra = listOf(
+            BotonBarra(Icons.Default.Home, "inicio"),
             BotonBarra(Icons.Default.Person, "perfil"),
             BotonBarra(Icons.Default.Settings, "config_app"),
             BotonBarra(Icons.Default.Build, "config_bot"),
+            BotonBarra(Icons.Default.Favorite, "favoritos"),
             BotonBarra(Icons.Default.ShoppingCart, "productos"),
         )
 
@@ -92,8 +95,8 @@ fun AppPrincipal() {
                     )
                 }
                 composable(Pantalla.Busquedas.ruta) { PantallaBusquedas() }
-                composable(Pantalla.Productos.ruta) { PantallaProductos() }
-                composable(Pantalla.Favoritos.ruta) { PantallaFavoritos() }
+                composable(Pantalla.Productos.ruta) { PantallaProductos(viewModel) }
+                composable(Pantalla.Favoritos.ruta) { PantallaFavoritos(viewModel) }
                 composable(Pantalla.Perfil.ruta) { PantallaPerfil() }
                 composable("config_bot") { PantallaConfigBot() }
                 composable("config_app") { PantallaConfigApp() }
